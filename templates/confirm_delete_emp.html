@@ -1,0 +1,31 @@
+{% extends 'common.html' %}
+{% block common %}
+    <table class="table table-dark">
+    <tr>
+        <th colspan="2">complete employee details</th>
+    </tr>
+<tr>
+    <th>Employee idno</th><th>{{ object.idno }}</th>
+</tr>
+        <tr>
+            <th>Employee name</th><th>{{ object.name }}</th>
+        </tr>
+        <tr>
+            <th>Employee salary</th><th>{{ object.salary }}</th>
+        </tr>
+{#    <tr><form method="post">#}
+{#        {% csrf_token %}#}
+{#         {{ form }}#}
+{#        <th align="center" colspan="2">#}
+{#            <button type="submit">Update</button>#}
+{#        </th>#}
+{#    </form>#}
+       <tr> <form method="post">
+        {% csrf_token %}
+        <th style="text-align: right"><button type="submit">Delete</button></th>
+    </form>
+    <form action="{% url 'view_employees' %}">
+        <th style="text-align: left"><button type="submit">Back</button></th>
+    </form></tr>
+    </table>
+{% endblock %}
