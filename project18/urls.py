@@ -38,4 +38,9 @@ urlpatterns = [
 
     path('check/',views.Check_credentials,name="Check_Credentials"),
 
+    path('viewall/',views.Viewall.as_view(),name="view")
+
+
+
+
 ]

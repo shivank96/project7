@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.contrib.messages.views import SuccessMessageMixin
-from  django.views.generic import TemplateView,CreateView,ListView,UpdateView,DetailView,DeleteView
+from  django.views.generic import TemplateView,CreateView,ListView,UpdateView,DetailView,DeleteView,View
 from  app18.models import EmployeeModel,EmployeeModels
 
 # class ShowIndex(TemplateView):
@@ -48,3 +48,7 @@ def Check_credentials(request):
         return render(request, "home.html")
     else:
         return redirect('main')
+
+
+class Viewall(View):
+    pass
